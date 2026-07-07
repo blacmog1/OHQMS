@@ -1,0 +1,12 @@
+# Environment and secrets
+.env
+.env.*
+*.pgpass
+
+# OS
+Thumbs.db
+Desktop.ini
+
+# Editor
+.vscode/
+.idea/
