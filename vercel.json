@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "patient-queue-system/frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/assets/(.*)",
+      "dest": "/patient-queue-system/frontend/assets/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/patient-queue-system/frontend/index.html"
+    }
+  ]
+}
