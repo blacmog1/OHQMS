@@ -63,9 +63,11 @@ export default defineConfig({
           'vendor-react': ['react', 'react-dom'],
           'vendor-icons': ['lucide-react'],
           'vendor-ui': ['sonner'],
+          'vendor-charts': ['recharts'],
         },
       },
     },
+    chunkSizeWarningLimit: 600,
   },
 })
 
