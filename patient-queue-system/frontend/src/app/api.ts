@@ -19,7 +19,7 @@ async function request(path: string, options: RequestInit = {}) {
   const response = await fetch(url, options);
   const data = await response.json().catch(() => null);
 
-  if (!response.ok) {
+  if (!response.ok || !data) {
     const errorMsg = data?.message || `HTTP error! Status: ${response.status}`;
     const errors = data?.errors || null;
     throw { message: errorMsg, errors, status: response.status };

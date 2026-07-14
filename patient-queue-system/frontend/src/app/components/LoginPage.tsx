@@ -38,6 +38,9 @@ export function LoginPage({ navigate, login }: Props) {
 
     try {
       const res = await api.login(email, password);
+      if (!res || !res.user) {
+        throw new Error("Invalid response from server. Please try again.");
+      }
       toast.success(`Welcome back, ${res.user.name || res.user.email}!`);
       login({
         id: res.user.id,
