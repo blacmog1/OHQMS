@@ -1,6 +1,7 @@
 # Environment and secrets
 .env
-.env.*
+.env.local
+.env.*.local
 *.pgpass
 
 # OS
@@ -10,3 +11,25 @@ Desktop.ini
 # Editor
 .vscode/
 .idea/
+
+# Temporary/debug scripts
+debug-login.php
+fix-declare-statements.php
+generate-admin-hash.php
+generate-hashes.php
+generate-kevin-hash.php
+generate-kevin-hash2.php
+run-migrations.php
+test-query.bat
+update-kevin-hash.sql
+
+# Kilo config (personal)
+.kilo/
+
+# Dependencies
+node_modules/
+vendor/
+
+# Build outputs
+dist/
+build/

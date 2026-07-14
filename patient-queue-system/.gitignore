@@ -1,0 +1,36 @@
+# ============================================================
+# OHAQRS - .gitignore
+# ============================================================
+
+# --- Secrets & Credentials (NEVER commit these) ---
+config/db.php
+
+# --- PHP / Server ---
+*.log
+*.cache
+error_log
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- IDE / Editor ---
+.vscode/
+.idea/
+*.sublime-workspace
+
+# --- Composer (if added later) ---
+vendor/
+composer.lock
+
+# --- Frontend Node Modules, Build, & Env ---
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+
+# --- Backup folders (local only, not needed on GitHub) ---
+frontend_backup/
+frontend_html_backup/
