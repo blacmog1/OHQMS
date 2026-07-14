@@ -21,6 +21,10 @@ if [ -n "$DATABASE_URL" ]; then
     DB_HOST_PORT="${DB_HOST_PORT_PATH%%/*}"
     DB_HOST="${DB_HOST_PORT%%:*}"
     DB_PORT="${DB_HOST_PORT##*:}"
+    # If URL had no explicit port, DB_PORT will equal DB_HOST; fix that
+    if [ -z "$DB_PORT" ] || [ "$DB_PORT" = "$DB_HOST" ]; then
+        DB_PORT=5432
+    fi
     # Extract database name and query params
     DB_NAME_PATH="${DB_HOST_PORT_PATH#*/}"
     DB_NAME="${DB_NAME_PATH%%\?*}"
